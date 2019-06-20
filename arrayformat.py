@@ -24,11 +24,11 @@ with open('tweakspeaking.csv') as csvfile:
 			if numelements == 15:
 				print(sublist)
 				print("______________________________________________________________")
-				#file1 = open("arraywrite.txt","a") 
-				#file1.write(sublist)
-				#file1.close()
+				
+				with open("arraywrite.txt", "a") as output:
+					output.write(str(sublist)+"\n\n")
 			
-		else:
+		else:		
 			sublist = []
 			sublist.append(row[1])
 			count = 0
